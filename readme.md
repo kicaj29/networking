@@ -78,5 +78,61 @@ Here subnet mask does not exist!
   * Only this address can be assigned to a device (computer)
   * Everything expect all zeros or all ones in the host portion
   ![netowrking-11-host-address.png](images/netowrking-11-host-address.png)
+
+**Devices that are in the same network can talk each other directly.**
+
+Sample network address:
+![netowrking-12-sample-network-address.png](images/netowrking-12-sample-network-address.png)
+
+Sample host address:
+![netowrking-13-sample-host-address.png](images/netowrking-13-sample-host-address.png)
+
+## Private and Public Address
+
+* Private IP address range (can be used in home network, work network)
+  * 10.0.0.0 - 10.255.255.255
+  * 172.16.0.0 - 172.31.255.255
+  * 192.168.0.0 - 192.168.255.255
+
+All other addresses are public.
+
+## Classless Inter-Domain Routing Notation (CIDR)
+
+It is length of network portion - amount of ones.
+
+203.0.113.10/24 means that the mask is 255.255.255.0 because 24 ones:
+1111111 11111111 11111111 00000000 gives 255.255.255.0.
+
+## Making a subnet calculator
+
+For available hosts we subtract 2 because all zeros and all ones are assigned to network address and broadcast address.
+
+| Bits        | Available networks           | Available hosts  |
+| ------------- |:-------------:| -----:|
+| 0          | 1    (2 pow 0)         | -  (1-2)        |
+| 1          | 2    (2 pow 1)         | -  (2-2)       |
+| 2          | 4    (2 pow 2)         | 2 (4-2)         |
+| 3          | 8    (2 pow 3)         | 6 (8-2)         |
+| 4          | 16             | 14 (6-2)         |
+| 5          | 32             | 30         |
+| 6          | 64             | 62         |
+| 7          | 128             | 126         |
+| 8          | 256             | 254         |
+| 9          | 512             | 510         |
+| 10          | 1024             | 1022         |
+
+## Subnetting a network into smaller networks
+
+We have to connect 8 offices together. ISP provides address range: 203.0.113.0/24 so the start address (network) is 203.0.113.0 and end address (broadcast) is 203.0.113.255. Using this range we have to create 8 sub-networks.
+
+![netowrking-14-subnetting.png](images/netowrking-14-subnetting.png)
+
+## Basic router operations
+
+10.0.0.0/24 divide into 2 networks.
+**Router job is to separate IP networks.**
+
+![netowrking-15-router.png](images/netowrking-15-router.png)
+
 # resources
 https://app.pluralsight.com/library/courses/network-layer-addressing-subnetting/table-of-contents
