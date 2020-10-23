@@ -134,5 +134,48 @@ We have to connect 8 offices together. ISP provides address range: 203.0.113.0/2
 
 ![netowrking-15-router.png](images/netowrking-15-router.png)
 
+## Variable Length Subnet Masking (VLSM)
+
+We have to configure such network having from ISP CIDR: 10.0.48.0/21.
+![netowrking-16-many-networks.png](images/netowrking-16-many-networks.png)
+
+From the diagram we see that we will need 13 networks:
+8 (for hosts) + 4 (for 4 routers) + 1 (routers on the top) = 13. Because routers on the top are connected directly they are in the same network so there is no need for additional router.
+
+From 10.0.48.0/21 we have 11 bits available:
+![netowrking-17-many-networks.png](images/netowrking-17-many-networks.png)
+
+From these 11 bits we need 4 bits to create 13 networks so in every network we will have only 7 bits for hosts so it means that in every network we can have maximum 126 hosts and this is not enough for this scenario - that`s why we have to use **VLSM**.
+
+### Setting up VLSM Problem
+
+![networking-18-300-hosts.png](images/networking-18-300-hosts.png)
+
+![networking-19-200-hosts.png](images/networking-19-200-hosts.png)
+
+![networking-20-200-hosts.png](images/networking-20-200-hosts.png)
+
+![networking-20-150-hosts.png](images/networking-20-150-hosts.png)
+
+![networking-22-125-hosts.png](images/networking-22-125-hosts.png)
+
+![networking-23-100-hosts.png](images/networking-23-100-hosts.png)
+
+![networking-24-75-hosts.png](images/networking-24-75-hosts.png)
+
+![networking-25-25-hosts.png](images/networking-25-25-hosts.png)
+
+![networking-25-2-hosts.png](images/networking-25-2-hosts.png)
+
+![networking-25-2a-hosts.png](images/networking-25-2a-hosts.png)
+
+Table with amount of bits needed to address required amount of hosts.
+
+![networking-26-table.png](images/networking-26-table.png)
+
+Final network assignment:
+
+![networking-27-assignment.png](images/networking-27-assignment.png)
+
 # resources
 https://app.pluralsight.com/library/courses/network-layer-addressing-subnetting/table-of-contents
