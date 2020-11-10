@@ -127,12 +127,14 @@ We have to connect 8 offices together. ISP provides address range: 203.0.113.0/2
 
 ![netowrking-14-subnetting.png](images/netowrking-14-subnetting.png)
 
-## Basic router operations
+## Basic router/NAT operations
 
 10.0.0.0/24 divide into 2 networks.
 **Router job is to separate IP networks.**
 
 ![netowrking-15-router.png](images/netowrking-15-router.png)
+
+![nat-28.png](images/nat-28.png)
 
 ## Variable Length Subnet Masking (VLSM)
 
@@ -178,4 +180,7 @@ Final network assignment:
 ![networking-27-assignment.png](images/networking-27-assignment.png)
 
 # resources
-https://app.pluralsight.com/library/courses/network-layer-addressing-subnetting/table-of-contents
+https://app.pluralsight.com/library/courses/network-layer-addressing-subnetting/table-of-contents   
+https://en.wikipedia.org/wiki/File:NAT_Concept-en.svg   
+https://documentation.meraki.com/MX/NAT_and_Port_Forwarding/Troubleshooting_Port_Forwarding_and_NAT_Rules   
+https://www.youtube.com/watch?v=QBqPzHEDzvo   
