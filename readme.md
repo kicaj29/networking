@@ -184,3 +184,4 @@ https://app.pluralsight.com/library/courses/network-layer-addressing-subnetting/
 https://en.wikipedia.org/wiki/File:NAT_Concept-en.svg   
 https://documentation.meraki.com/MX/NAT_and_Port_Forwarding/Troubleshooting_Port_Forwarding_and_NAT_Rules   
 https://www.youtube.com/watch?v=QBqPzHEDzvo   
+https://www.youtube.com/watch?v=ujXr0i5EoHE   
