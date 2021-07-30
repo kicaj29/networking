@@ -1,3 +1,18 @@
+- [Binary](#binary)
+- [Hexadecimal](#hexadecimal)
+- [IP Addressing (IPv4)](#ip-addressing-ipv4)
+  - [Classless addressing (~1995 to present)](#classless-addressing-1995-to-present)
+  - [Classful addressing (~1995 and prior)](#classful-addressing-1995-and-prior)
+  - [Address Types](#address-types)
+  - [Private and Public Address](#private-and-public-address)
+  - [Classless Inter-Domain Routing Notation (CIDR)](#classless-inter-domain-routing-notation-cidr)
+  - [Making a subnet calculator](#making-a-subnet-calculator)
+  - [Subnetting a network into smaller networks](#subnetting-a-network-into-smaller-networks)
+  - [Basic router/NAT operations](#basic-routernat-operations)
+  - [Variable Length Subnet Masking (VLSM)](#variable-length-subnet-masking-vlsm)
+    - [Setting up VLSM Problem](#setting-up-vlsm-problem)
+- [find port using nestat command](#find-port-using-nestat-command)
+- [resources](#resources)
 # Binary
 ![netowrking-01-binary-formart.png](images/netowrking-01-binary-formart.png)
 
@@ -178,6 +193,13 @@ Table with amount of bits needed to address required amount of hosts.
 Final network assignment:
 
 ![networking-27-assignment.png](images/networking-27-assignment.png)
+
+# find port using nestat command
+
+```
+D:\>netstat -ano -p tcp | findstr 33714
+  TCP    192.168.254.101:33714  3.235.96.62:443        CLOSE_WAIT      4184
+```
 
 # resources
 https://app.pluralsight.com/library/courses/network-layer-addressing-subnetting/table-of-contents   
