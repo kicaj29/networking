@@ -200,6 +200,16 @@ Final network assignment:
 D:\>netstat -ano -p tcp | findstr 33714
   TCP    192.168.254.101:33714  3.235.96.62:443        CLOSE_WAIT      4184
 ```
+Next we can find process name using command:
+```
+PS D:\> tasklist /fi "pid eq 4"
+
+Image Name                     PID Session Name        Session#    Mem Usage
+========================= ======== ================ =========== ============
+System                           4 Services                   0      4 688 K
+```
+
+
 
 # resources
 https://app.pluralsight.com/library/courses/network-layer-addressing-subnetting/table-of-contents   
