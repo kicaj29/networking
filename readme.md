@@ -118,6 +118,8 @@ It is length of network portion - amount of ones.
 203.0.113.10/24 means that the mask is 255.255.255.0 because 24 ones:
 1111111 11111111 11111111 00000000 gives 255.255.255.0.
 
+https://cidr.xyz/
+
 ## Making a subnet calculator
 
 For available hosts we subtract 2 because all zeros and all ones are assigned to network address and broadcast address.
